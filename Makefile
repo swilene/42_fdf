@@ -6,7 +6,7 @@
 #    By: saguesse <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/07 14:54:21 by saguesse          #+#    #+#              #
-#    Updated: 2022/10/04 16:25:40 by saguesse         ###   ########.fr        #
+#    Updated: 2022/10/06 13:01:34 by saguesse         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,9 @@ OBJ = $(SRC:.c=.o)
 
 $(NAME): $(MLX) $(PRINTF) $(LIBFT) $(OBJ)
 	$(CC) -o $(NAME) $(CFLAGS) $(OBJ) $(LIBFT) $(PRINTF) $(MLX) -L/usr/lib -lXext -lX11 -lm
+
+$(MLX):
+	make -C $(MLX_PATH)
 
 $(LIBFT):
 	make -C $(LIBFT_PATH)
