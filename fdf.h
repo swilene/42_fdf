@@ -17,7 +17,6 @@
 # include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
-# include <math.h>
 # include <X11/keysym.h>
 # include <X11/X.h>
 
